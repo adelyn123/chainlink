@@ -21,7 +21,7 @@
     "start": "npm run server",
     "start:dev": "cross-env PORT=3002 react-scripts start",
     "build": "react-scripts build",
-    "test": "jest test",
+    "test": "react-scripts test",
     "build-theme": "lessc --js src/theme/theme.less src/theme.css",
     "watch-theme": "less-watch-compiler --enable-js src/theme src theme.less",
     "server": "node server",
