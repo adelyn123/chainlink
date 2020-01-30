@@ -128,6 +128,11 @@ func validateFluxMonitor(i models.Initiator, j models.JobSpec) error {
 	if len(i.Feeds) == 0 {
 		fe.Add("no feeds")
 	}
+	if i.IdleThreshold == 0 {
+		fe.Add("no idleThreshold")
+	} else if i.IdleThreshold < MinimumIdleThreshold {
+		fe.Add("idleThreshold must be equal or greater than " + MinimumPollingInterval.String())
+	}
 	if i.Threshold <= 0 {
 		fe.Add("bad threshold")
 	}

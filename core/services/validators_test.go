@@ -375,6 +375,7 @@ const validInitiator = `{
 			"https://lambda.staging.devnet.tools/cc/call",
 			"https://lambda.staging.devnet.tools/cmc/call"
 		],
+		"idleThreshold": "1m",
 		"threshold": 0.5,
 		"precision": 2,
 		"pollingInterval": "1m"
